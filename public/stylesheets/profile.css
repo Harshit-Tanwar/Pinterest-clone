@@ -1,0 +1,56 @@
+body {
+    background-color: #dadada;
+    margin: 0;
+    padding: 0;
+}
+
+.box-area {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.single-box {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.img-area {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+}
+
+.img-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    background-color: blueviolet;
+    padding: 5px 10px;
+    border-radius: 5px;
+
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: start;
+}
+
+input{
+    width: 50%;
+    height: 38px;
+    margin: 2px;
+    padding: 10px;
+    font-size: 15px;
+}

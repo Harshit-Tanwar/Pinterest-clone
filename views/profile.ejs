@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+</head>
+
+<body>
+    <div class="box-area">
+        <div class="single-box">
+            <div class="img-area">
+                <img src="https://images.unsplash.com/photo-1746645012316-39ef59320d9b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0OHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="">
+            </div>
+            <h4><%= user.fullname %></h4>
+            <h4>@<%= user.username %></h4>
+            <a href="#">Logout</a>
+            <form class="frm" action="/upload" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" id="">
+                <input type="text" name="caption" id="">
+                <input type="submit" name="Upload" id="">
+                
+            </form>
+        </div>
+    </div>
+    <div class="container mb-5">
+        <div class="cards flex">
+        <% if (user.posts.length === 0) { %>
+            <h2 class="text-center">No posts yet</h2>
+        <% } %>
+        <% user.posts.forEach(function(post) { %>
+         
+        <div class="card" style="width: 18rem; border-radius: 10px;">
+            <img src="/images/uploads/<%= post.image %>" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><%= post.postText %></h5>
+            </div>
+        </div>
+        <% }) %>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
