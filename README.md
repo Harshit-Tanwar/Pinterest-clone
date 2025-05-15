@@ -1,4 +1,4 @@
-##📌 Pinterest Clone
+## 📌 Pinterest Clone
 
 A basic Pinterest clone built using **Node.js**, **Express.js**, **EJS** as the view engine, and **MongoDB** for the database.
 This project includes user authentication and allows users to upload and view images.
